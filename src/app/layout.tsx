@@ -16,7 +16,7 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Suspense } from "react";
 import { AdsterraGlobalScripts, AdsterraPageAds } from "@/components/ads/Adsterra";
 
-const DisclaimerLoader = dynamic(() => import("@/components/ui/overlay/DisclaimerLoader"));
+
 
 export const metadata: Metadata = {
   // Gunakan 'template' agar judul halaman bisa berubah di setiap page
@@ -105,7 +105,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Suspense>
           <NuqsAdapter>
             <Providers>
-              {IS_PRODUCTION && <DisclaimerLoader />}
+
               <TopNavbar />
               <Sidebar>
                 <div className="min-w-0 flex-1">
