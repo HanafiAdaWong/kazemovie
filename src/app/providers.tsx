@@ -8,16 +8,7 @@ import { AppProgressProvider as ProgressProvider } from "@bprogress/next";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { usePathname, useRouter } from "next/navigation";
 import useDiscoverFilters from "@/hooks/useDiscoverFilters";
-import dynamic from "next/dynamic";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
-
-const DevelopmentQueryDevtools = dynamic(
-  () =>
-    import("@tanstack/react-query-devtools").then((module) => ({
-      default: module.ReactQueryDevtools,
-    })),
-  { ssr: false },
-);
 
 export const queryClient = new QueryClient();
 
@@ -58,11 +49,6 @@ export default function Providers({ children }: PropsWithChildren) {
         </NextThemesProvider>
       </HeroUIProvider>
       </LanguageProvider>
-      {process.env.NODE_ENV !== "production" && (
-        <div className="hidden md:block">
-          <DevelopmentQueryDevtools initialIsOpen={false} />
-        </div>
-      )}
     </QueryClientProvider>
   );
 }

@@ -13,8 +13,8 @@ import {
 } from "react-icons/io5";
 
 export const siteConfig: SiteConfigType = {
-  name: "filmanesia",
-  description: "Temukan film dan serial TV terbaru, populer, dan terbaik di Filmanesia.",
+  name: "kazemovie",
+  description: "Temukan film dan serial TV terbaru, populer, dan terbaik di Kazemovie.",
   favicon: "/favicon.ico",
   navItems: [
     {
@@ -34,12 +34,6 @@ export const siteConfig: SiteConfigType = {
       href: "/search",
       icon: <BiSearchAlt2 className="size-full" />,
       activeIcon: <BiSolidSearchAlt2 className="size-full" />,
-    },
-    {
-      label: "About",
-      href: "/about",
-      icon: <IoInformationCircleOutline className="size-full" />,
-      activeIcon: <IoInformationCircle className="size-full" />,
     },
   ],
   themes: [

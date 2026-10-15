@@ -40,16 +40,13 @@ const AboutPage: NextPage = () => {
             </Link>
           </p>
           <p className="max-w-md text-sm text-foreground-500">
-            Suka dengan website ini? Dukung pengembangannya melalui donasi agar Filmanesia bisa terus
-            berkembang dan memberikan pengalaman menonton yang lebih baik.
+            Suka dengan website ini? Nikmati pengalaman streaming film dan serial TV terbaik di Kazemovie.
           </p>
           <Link
-            href="https://saweria.co/RizalFirmansyah"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/"
             className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-80"
           >
-            Dukung Filmanesia
+            Mulai Menonton
           </Link>
         </div>
 
