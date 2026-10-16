@@ -41,7 +41,7 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
   ...props
 }) => {
   const [iframeReady, setIframeReady] = useState(false);
-  const [playerUnlocked, setPlayerUnlocked] = useState(() => !IS_PRODUCTION);
+  const [playerUnlocked, setPlayerUnlocked] = useState(true);
   const [sourceOpened, sourceHandlers] = useDisclosure(false);
   const [episodeOpened, episodeHandlers] = useDisclosure(false);
   const [selectedSource, setSelectedSource] = useQueryState<number>(

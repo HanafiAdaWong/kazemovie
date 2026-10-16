@@ -23,7 +23,7 @@ interface MoviePlayerProps {
 const MoviePlayer: React.FC<MoviePlayerProps> = ({ movie, startAt }) => {
   const title = mutateMovieTitle(movie);
   const [iframeReady, setIframeReady] = useState(false);
-  const [playerUnlocked, setPlayerUnlocked] = useState(() => !IS_PRODUCTION);
+  const [playerUnlocked, setPlayerUnlocked] = useState(true);
   const [opened, handlers] = useDisclosure(false);
   const [selectedSource, setSelectedSource] = useQueryState<number>(
     "src",

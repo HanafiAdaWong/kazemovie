@@ -14,7 +14,7 @@ import dynamic from "next/dynamic";
 import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Suspense } from "react";
-import { AdsterraGlobalScripts, AdsterraPageAds } from "@/components/ads/Adsterra";
+
 
 
 
@@ -100,7 +100,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             gtag('config', 'G-5QZ4FQ33WN');
           `}
         </Script>
-        <AdsterraGlobalScripts />
+
 
         <Suspense>
           <NuqsAdapter>
@@ -112,7 +112,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                   <main className={cn("container mx-auto max-w-full", SpacingClasses.main)}>
                     {children}
                   </main>
-                  <AdsterraPageAds />
+
                 </div>
               </Sidebar>
               <BottomNavbar />
