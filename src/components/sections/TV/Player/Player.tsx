@@ -135,6 +135,7 @@ const TvShowPlayer: React.FC<TvShowPlayerProps> = ({
           {playerUnlocked && <iframe
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
+              sandbox="allow-scripts allow-same-origin allow-presentation allow-forms"
               loading="eager"
               key={`${PLAYER.title}-${selectedSubtitle}`}
               src={PLAYER.source}
