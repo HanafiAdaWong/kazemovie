@@ -59,6 +59,13 @@ export const getMoviePlayers = (
 ): PlayersProps[] => {
   return [
     {
+      title: "VidNest (Utama)",
+      source: `https://vidnest.fun/movie/${id}`,
+      recommended: true,
+      fast: true,
+      supportsSubtitles: true,
+    },
+    {
       title: "VidSrc (VIP)",
       source: addSubtitleLanguage(`https://vidsrc.to/embed/movie/${id}`, subtitleLanguage),
       recommended: true,
@@ -126,7 +133,14 @@ export const getTvShowPlayers = (
 ): PlayersProps[] => {
   return [
     {
-      title: "AutoEmbed (Stabil & K-Drama)",
+      title: "VidNest (Utama)",
+      source: `https://vidnest.fun/tv/${id}/${season}/${episode}`,
+      recommended: true,
+      fast: true,
+      supportsSubtitles: true,
+    },
+    {
+      title: "AutoEmbed (K-Drama)",
       source: `https://autoembed.co/tv/tmdb/${id}-${season}-${episode}`,
       recommended: true,
       fast: true,
