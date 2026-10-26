@@ -35,6 +35,12 @@ export const siteConfig: SiteConfigType = {
       icon: <BiSearchAlt2 className="size-full" />,
       activeIcon: <BiSolidSearchAlt2 className="size-full" />,
     },
+    {
+      label: "About",
+      href: "/about",
+      icon: <IoInformationCircleOutline className="size-full" />,
+      activeIcon: <IoInformationCircle className="size-full" />,
+    },
   ],
   themes: [
     {

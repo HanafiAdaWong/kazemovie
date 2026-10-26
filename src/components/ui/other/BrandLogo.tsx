@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Saira } from "@/utils/fonts";
 import { cn } from "@/utils/helpers";
+import { Next } from "@/utils/icons";
+import useDiscoverFilters from "@/hooks/useDiscoverFilters";
 
 export interface BrandLogoProps {
   animate?: boolean;
@@ -11,14 +13,16 @@ export interface BrandLogoProps {
 }
 
 const BrandLogo: React.FC<BrandLogoProps> = ({ animate = false, className }) => {
+  const { content } = useDiscoverFilters();
+
   return (
     <Link href="/" className="group flex items-center gap-2">
       <Image
         src="/logo.png"
         alt="Kazemovie Logo"
-        width={36}
-        height={36}
-        className="rounded-full transition-transform group-hover:scale-110"
+        width={34}
+        height={34}
+        className="rounded-full object-cover transition-transform group-hover:scale-110 shadow-sm"
         priority
       />
       <span
@@ -34,7 +38,15 @@ const BrandLogo: React.FC<BrandLogoProps> = ({ animate = false, className }) => 
         )}
       >
         KAZE
-        <span className="text-primary">MOVIE</span>
+        <span>
+          <Next
+            className={cn("size-full px-[2px] transition-colors", {
+              "text-primary": content === "movie",
+              "text-warning": content === "tv",
+            })}
+          />
+        </span>
+        MOVIE
       </span>
     </Link>
   );
