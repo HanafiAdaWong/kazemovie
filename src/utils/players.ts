@@ -60,7 +60,7 @@ export const getMoviePlayers = (
   return [
     {
       title: "VidNest (Utama)",
-      source: `https://vidnest.fun/movie/${id}`,
+      source: addSubtitleLanguage(`https://vidnest.fun/movie/${id}`, subtitleLanguage),
       recommended: true,
       fast: true,
       supportsSubtitles: true,
@@ -74,7 +74,7 @@ export const getMoviePlayers = (
     },
     {
       title: "AutoEmbed",
-      source: `https://autoembed.co/movie/tmdb/${id}`,
+      source: addSubtitleLanguage(`https://autoembed.co/movie/tmdb/${id}`, subtitleLanguage),
       recommended: true,
       fast: true,
       supportsSubtitles: true,
@@ -134,14 +134,20 @@ export const getTvShowPlayers = (
   return [
     {
       title: "VidNest (Utama)",
-      source: `https://vidnest.fun/tv/${id}/${season}/${episode}`,
+      source: addSubtitleLanguage(
+        `https://vidnest.fun/tv/${id}/${season}/${episode}`,
+        subtitleLanguage,
+      ),
       recommended: true,
       fast: true,
       supportsSubtitles: true,
     },
     {
       title: "AutoEmbed (K-Drama)",
-      source: `https://autoembed.co/tv/tmdb/${id}-${season}-${episode}`,
+      source: addSubtitleLanguage(
+        `https://autoembed.co/tv/tmdb/${id}-${season}-${episode}`,
+        subtitleLanguage,
+      ),
       recommended: true,
       fast: true,
       supportsSubtitles: true,
